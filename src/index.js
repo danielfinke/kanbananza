@@ -8,7 +8,12 @@ import rootReducer from './reducers';
 
 import './index.scss';
 
-const store = createStore(rootReducer);
+const reduxDevToolsExt = window.__REDUX_DEVTOOLS_EXTENSION__;
+
+const store = createStore(
+  rootReducer,
+  typeof reduxDevToolsExt === 'function' && reduxDevToolsExt(),
+);
 
 ReactDOM.render(
   <Provider store={store}>
