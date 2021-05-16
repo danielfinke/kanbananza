@@ -1,11 +1,11 @@
 import React from 'react';
-import List from './List';
+import ConnectedList from '../containers/ConnectedList';
 
 const Lists = ({ lists = [] }) => {
   return (
     <section className="Lists">
-      {lists.map((list) => (
-        <List />
+      {lists.map((listId) => (
+        <ConnectedList listId={listId} />
       ))}
     </section>
   );
