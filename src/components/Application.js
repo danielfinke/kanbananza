@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Users from './Users';
-import CreateList from './CreateList';
+import ConnectedCreateList from '../containers/ConnectedCreateList';
 import ConnectedLists from '../containers/ConnectedLists';
 
 const Application = () => {
@@ -9,7 +9,7 @@ const Application = () => {
     <main className="Application">
       <Users />
       <section>
-        <CreateList />
+        <ConnectedCreateList />
         <ConnectedLists />
       </section>
     </main>
