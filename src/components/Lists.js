@@ -5,7 +5,7 @@ const Lists = ({ lists = [] }) => {
   return (
     <section className="Lists">
       {lists.map((listId) => (
-        <ConnectedList listId={listId} />
+        <ConnectedList key={listId} listId={listId} />
       ))}
     </section>
   );
